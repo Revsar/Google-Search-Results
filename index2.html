@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<style>
+
+.ul-top {
+        list-style-type: none;
+margin-top:10px;
+padding:0;
+
+top:0;
+width:100%;
+align-items: left;
+}
+.image {
+   float:left;
+    transform: scale(0.35);
+    margin-top: -20px;
+    margin-left: -65px;
+    margin-right: -45px;
+  }
+
+.search {
+     position: sticky;
+     display: flex;
+    flex-direction: row;;
+     margin: 20px 0 0 -120px;
+width:650px;
+height: 45px;
+border-radius: 50px;
+border: 1px solid rgb(226, 217, 217); 
+;
+box-shadow: 0 0 5px #b0b0b3;
+}
+.search-bar{ 
+width:85%;
+height: 95%;
+    border-radius: 25px;
+background-color: white;
+border: white;
+box-shadow: none;
+outline: 0;
+font-size: 14px;
+padding-left: 20px;
+padding-right: 20px;
+}
+.search:hover {
+    box-shadow:0 0 15px #b0b0b3;
+    }
+.magnifying {  
+     transform: scale(0.4); 
+     margin-right: 5px;
+     margin-left: -50px; 
+     
+     
+}
+.x-icon {
+    transform:scale(0.4); 
+    margin-left: 500px;
+    align-items: flex-end;
+    margin-right: -15px; 
+    }
+.vl { border-left: 1px solid lightgray;
+height: 70%;
+margin-top: 1%;
+margin-left: 10px;}
+
+.tags {
+    width: 100%;
+    overflow:auto;
+   color: grey;
+     }
+  div {margin-right: 50px;}
+.tags a { 
+    float: left;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 14px;
+font-family: Arial, Helvetica, sans-serif;
+color: gray;
+font-weight: 500;
+}
+.tags a:hover { color: blue;
+     ;} 
+.center {margin-left: 55px;}
+.left {margin-left: 160px;}
+h3 {font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+text-decoration: none;
+margin-left: 170px ;
+font-weight: 500;}
+h3 a:hover {text-decoration: underline 1px blue; font-weight: 300;  }
+a {text-decoration: none;}
+p {font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+text-decoration: none;
+margin-left: 170px ;
+font-weight: 400;
+color: rgb(61, 61, 61);}
+.results {max-width: 800px;}
+#table {
+    margin-left: 155px; 
+  font-family:Arial, Helvetica, sans-serif;  
+  color: darkslategray;
+}
+th { 
+    text-align: left;
+   padding: 20px;
+}
+td {
+   width:100%; 
+border-bottom: lightgray 1px solid;
+padding: 20px;
+font-size: 16px;
+padding-left: 15px;
+}
+h4 {font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+text-decoration: none;
+margin-left: 20px ;
+font-weight: 500;}
+.column {
+    display: inline-flexbox;
+    flex: 0%;
+    float: left;
+    width: 25%;
+    padding:0;
+    margin-right: 20px;
+       text-align: center;
+    
+     
+}
+.column img {border-radius: 20%;
+    border: 1px;
+    border-color: none; 
+      display: block;
+      max-width: 3cm;
+      max-height: fit-content;
+      overflow: hidden;
+  ;
+  }
+.row {display: flex;  
+justify-content: space-between;    
+    width: 50%;
+    margin-left: -20px;
+    padding-left:50px;
+    max-width: 400px;}
+   
+ .end {margin-left: 20px;}   
+    
+.jlogo {
+    width: 100%; 
+    padding-top: 25px; 
+    padding-bottom: 30px;
+    background-color: rgb(0 ,0 , 0, 0.03)    
+}
+.jlogo1 {    width: 100%; 
+    padding-top: 25px; 
+    padding-bottom: 30px;
+    background-color: rgb(0 ,0 , 0, 0.03) }
+.row::after { 
+    content: "";
+clear:both;
+display: table;}
+.site 
+{size:14px;
+font-family: Arial, Helvetica, sans-serif;
+text-decoration: none;
+color: darkslategray;}
+
+   #suggestions {
+    border: 1px solid lightgray;
+padding-bottom: 20px;
+margin-top: 15px;
+margin-bottom: 15px;  
+   border-radius: 5px;
+   max-width: 700px;
+   margin-left: 170px;
+   }
+.search-more{
+    margin-left: 30% ;
+    margin-top: 25px;
+    height: 30px;
+    width: 300px;
+    border-radius: 20px;
+    background-color: white;
+    border: 1px solid lightgray;
+    box-shadow: none;
+    color: blue;
+    }
+    button:hover {background-color: rgb(243, 239, 239);}
+    .final {
+        margin-left: 170px;
+        border: none;
+        padding-left: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .final th {text-align: left;
+    padding-left: 0px;}
+    .final td {
+        width:50%; 
+padding: 3px;
+font-size: 14px;
+font-weight: 600;
+border: none;;
+    }
+  
+
+        .ul-foot {
+    list-style-type: none;
+    background-color: lightgray;
+margin:10px;
+padding:0;
+position: relative;
+bottom:0;
+width:100%;
+font-size: 14px;
+line-height: 30px;
+text-decoration: none;
+;}
+
+.li1 {
+    float: left;
+    margin: 10px;
+ }
+
+ footer {background-color: lightgray;}
+ .ul-foot a{text-decoration: none;
+  font-size: 14px;
+font-family: Arial, Helvetica, sans-serif;
+color: gray;}
+.li2 {
+    margin-right:  1%;}
+  
+   
+    .blue-button {
+    background-color: rgb(66, 133, 244);
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+font-weight: 700;
+padding: 5px;
+margin: 10px 0 0 0;
+border-radius: 4px;
+border-color: rgb(66, 133, 244);
+}   
+.grid {
+    transform: scale(0.06); ; margin: -105px; margin-top: -90px;
+    }
+</style>
+
+<html>
+    <head><script src="https://kit.fontawesome.com/f15b929834.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></head>
+        <header> 
+            <ul class="ul-top">
+                <li class="li3" style="float:right"><button class=blue-button type="search"> Sign In </button> </li>
+                    <li class="li2" style="float:right"><img class="grid" src="grid.png" alt="Google Apps">  </a></li>
+                <li> <img class="image" src=https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png alt="googlelogo"> </li>
+                <li><div class="search">
+                    <input class="search-bar" type="text">
+                    <img class="x-icon" src="x-icon.png" alt="x-icon">
+                    <div class="vl"></div>
+                    <img class="magnifying" src="blueglass.png" alt="magnifying glass">
+                    
+                </div> 
+            </li>  
+        </ul>
+    </header>    
+    <div class="tags">
+        <a class="left" href="#"><i class="fa fa-fw fa-search"></i> All</a>
+        <a href="#"><i class="fa fa-fw fa-newspaper"></i> News </a>
+        <a href="#"><i class="fa fa-fw fa-youtube">  </i> Videos </a>
+        <a href="#"><i class="fa fa-fw fa-map-marker-alt"></i>  Maps </a>
+        <a href="#"><i class="fa fa-fw fa-image"></i> Images</a>  
+        <a href="#"><i class="fa fa-fw fa-ellipsis-v"></i>  More 
+        <a class="center" > Settings</a>
+        <a > Tools </a>
+    </div> 
+    <hr style=" border-width: 1px; border-style: solid; border-color: rgb(226, 226, 226); position: sticky;">
+<body>
+   <div class="results"> <h3><a href="">How To Build Free Website - wix.com</a></h1>
+    <p> Create A Stunning Site for Free. Easy to Use, Build a Website Online. Market leaders. Advanced image editor. Easy-to-add blog. Traffic generation tools. Customizable templates. Multiple payment methods. Easy drag n’ drop. Top industry hosting. SEO wizard.</p>
+    <h3><a href="">Website Builders (Recommended) - Ultimate Website Builder...</a></h1>
+        <p>It's  Easy and Free. Compare the Best Website Builders. The #1 Website Builder's Reviews! It's Easy. Compare the Best Website Builders and Choose Yours. Make a Free Website...</p>
+        <h3><a href="">10 Best Website Builders 2021 - Website Builders (Recommended)</a></h1>
+            <p> It's Easy. Compare the Best Website Builders and Choose Yours. Create a Free Website Today</p>
+            <h3><a href="">10 Best Website Builders 2021 - The #1 Website Builder Ranking</a></h1>
+                <p> Compare The Best Website Builders Out There. Website Building was Never so Easy!</p>
+                <h3><a href="">build this webpage - GitHub Pages</a></h1>
+                    <p> build this webpage. https://benjdelt.github.io/google-results/. With zero coding experience, artist building 180 webpages in 180 days ...</p>
+                    <h3><a href="">build this webpage - GitHub Pages</a></h1>
+                        <p> With zero coding experience, artist building 180 webpages . ... days ago, having never done any programming in her life, Jennifer Dewalt built her first webpage.</p>
+                        <h3><a href="">How to Build a Website 2021 | A Step-by-Step Beginner's Guide</a></h1>
+                            <p> 25 Feb 2021 — Anyone can build a website with the right tools - and the right guide! We'll show you how to make yours in just 9 steps.</p>
+                            <table style="width: 85%;" id="table">
+                            <tr>
+                                <th style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 500;">People also ask</th>
+                                <th>  </th>
+                            </tr>
+                            <tr>
+                            <td>How can I create my own webpage? </td>
+                            <td><i class="fa fa-fw fa-chevron-down" style="text-align: right;"></i> </td>
+                        </tr>
+                        <tr></tr>
+                            <td> Is it hard to build a Web page? </td>
+                             <td><i class="fa fa-fw fa-chevron-down" style="text-align: right;"></i> </td>
+                            </tr>
+                            <tr>
+                            <td>What is the best free website builder?</td>
+                            <td><i class="fa fa-fw fa-chevron-down" style="text-align: right;"></i> </td>
+                        </tr>
+                            <tr>
+                            <td>How much does it cost to build a website? </td>
+                            <td><i class="fa fa-fw fa-chevron-down" style="text-align: right;"></i> </td>
+                        </tr>                                   
+                                            </tr></table>
+
+                            <h3><a href="">How to Create a Website: Step-by-Step Guide for Beginners ...</a></h1>
+                                <p> 25 Jan 2021 — Learn how to make a website and set it up. This site contains different tutorials on how to build a website using WordPress, Joomla, Drupal ...</p>
+                                <h3><a href="">Build a Website with HTML, CSS, and Github Pages ...</a></h1>
+                                    <p> One of the best ways to start coding is by building websites. Whether you want to tweak your business's site, hone your web development skills, or learn to ...</p>
+                                    <h3><a href="">Make Your Own Website in Just 1 Hour With This Easy Guide ...</a></h1>
+                                        <p> This site teaches you how to make a website in just 3 easy to follow steps. There's also lots of really useful resources to help you build traffic in 2021...</p>
+                                        <h3><a href="">How to Create a Website | PCMag</a></h1>
+                                            <p> If you need to quickly build a simple website, starting with a blogging service is a great way to go. Advertisement. The major player in the blog game is WordPress, ...</p>
+                                                                                        <h3><a href="">How to Create a Website: Step-by-Step Tutorial</a></h1>
+                                                <p> Jump to Creating from scratch — Creating from scratch; Using a content management system (CMS); Using a website builder. You get more flexibility in ...</p>
+                                                <h3><a href="">Squarespace: Build a Website – Website Builder</a></h1>
+                                                    <p>Squarespace is the all-in-one solution for anyone looking to create a beautiful website. Domains, eCommerce, hosting, galleries, analytics, and 24/7 support all ...</p>
+                                                    <h3><a href="">How To Build a Website - W3Schools</a></h1>
+                                                        <p> Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Bootstrap, Java ...</p>
+                                                        <h3><a href="">The 10 Best Website Builders - 2021's Best Website Builders</a></h1>
+                                                            <p>Best Rated 2021's Website Builder. Create a New Website Today! Modernize Your Website in 5 Min - Stand Out From Competition - Intuitive Design. The Best Domains. Expert Reviews.
+                                                                ‎Free & Premium Plans · ‎Top 3 SMB Website Builder · ‎Blog Builders Best Offers
+                                                                Deal: 55% off Gator Site Builder</p>
+                                                    </div>
+                                                   <div id="suggestions"><div><h3 class="end">People also search for</h3></div>
+                                                    <div><h4>Website development tools</div>
+                                                    <div class="row">
+   
+    <div class="column">
+        <a target="_blank" href="">
+        <img src="WordPress_blue_logo.svg.png" alt="WordPress Logo" style="width: 100%; background-color: rgb(0 ,0 , 0, 0.03)">
+    </a> 
+    <div class="site"> WordPress </div>
+    </div>
+    <div class="column">
+        <a target="_blank" href="">
+        <img src="1200px-Weebly_logo.svg.png" alt="Weebly Logo" class="jlogo1" style="width: 100%; ">
+    </a> 
+    <div class="site"> Weebly </div>
+    </div>
+    <div class="column">
+        <a target="_blank" href="">
+        <img src="480px-Bootstrap_logo.svg.png" alt="Bootstrap Logo" style="width: 100%; background-color: rgb(0 ,0 , 0, 0.03)">
+    </a> 
+    <div class="site"> Bootstrap </div>
+    </div>
+    <div class="column">
+        <a target="_blank" href="">
+        <img src="webflow.png" alt="Webflow Logo" style="width: 100%; background-color: rgb(0 ,0 , 0, 0.03) ;">
+    </a> 
+    <div class="site"> Webflow </div>
+    </div>
+    
+    <div class="column">
+        <a target="_blank" href="">
+        <img src="Jimdo_Logo_2019.png"  alt="Jimdo Logo" class="jlogo">
+    </a> 
+    <div class="site"> Jimdo </div>
+    </div>
+    <div class="column">
+        <a target="_blank" href="">
+        <img src="logo-fb-default.png" alt="Strikingly Logo" style="width: 100%; background-color: rgb(233, 231, 231)" >
+    </a> 
+    <div class="site"> Strikingly </div>
+    </div>
+    
+</div>
+<button class="search-more"> <i class="fa fa-fw fa-arrow-right" style="text-align: left; margin-right: 100px; margin-left: -100px;"></i>  See More  </button>
+</div>   
+    
+<table style="width: 85%;" class="final" >
+    <tr>
+        <th style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 500;">Searches related to build this webpage</th>
+        <th>  </th>
+    </tr>
+    <tr>
+    <td><a href="">how to build a website from scratch</a> </td>
+    <td><a href="">fastest way to build a website</a> </td>
+</tr>
+<tr>
+<td><a href="">free website builder</a> </td>
+<td><a href="">learn how to build a website</a> </td>
+    </tr>
+    <tr>
+        <td><a href="">how to build an interactive website from scratch</a> </td>
+        <td><a href=""> how to build a website for a client</a> </td>
+</tr>
+    <tr>
+        <td><a href="">how to build a great website</a> </td>
+        <td><a href=""> ways to build a website </a> </td>
+</tr>                                   
+
+</table>
+
+</body>
+                        
+
+        
+    
+    <footer  > <ul class="ul-foot">
+        <li class="li1"><a href=""> Help </a></li>
+        <li class="li1"><a href=""> Send Feedback </a></li>
+        <li class="li1"><a href="">Privacy </a></li>
+        <li class="li1"><a href="">Terms </a></li>
+    </ul>
+        
+       
+
+
+
+
+
+</html>
